@@ -1,13 +1,66 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>todo-app</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To Do List</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body class="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+  <div class="max-w-2xl mx-auto px-4 py-10">
+
+    <!-- header -->
+    <div class="flex items-center justify-between mb-8">
+      <h1 class="text-3xl font-bold text-blue-900 dark:text-cyan-400">
+        📝 To Do List
+      </h1>
+      <button id="btnDark"
+        class="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-80 transition">
+        🌙 Dark mode
+      </button>
+    </div>
+
+    <!-- add task -->
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow p-6 mb-6">
+      <div class="flex gap-3">
+        <input id="inputTask" type="text" placeholder="Write a new task..."
+          class="flex-1 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+        <button id="btnAdd"
+          class="bg-blue-900 dark:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:opacity-80 transition">
+          Add
+        </button>
+      </div>
+    </div>
+
+    <!-- search + filters -->
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow p-4 mb-6 flex flex-col gap-3">
+      <input id="inputSearch" type="text" placeholder="🔍 Search task..."
+        class="w-full border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+      <div class="flex gap-2">
+        <button data-filter="all"
+          class="filter-btn flex-1 py-2 rounded-lg text-sm font-semibold bg-blue-900 text-white">
+          All
+        </button>
+        <button data-filter="pending"
+          class="filter-btn flex-1 py-2 rounded-lg text-sm font-semibold bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-white">
+          Pending
+        </button>
+        <button data-filter="completed"
+          class="filter-btn flex-1 py-2 rounded-lg text-sm font-semibold bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-white">
+          Completed
+        </button>
+      </div>
+    </div>
+
+    <!-- task list -->
+    <div id="taskList" class="flex flex-col gap-3"></div>
+
+    <!-- counter -->
+    <p id="counter" class="text-center text-gray-400 dark:text-gray-500 text-sm mt-6"></p>
+
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>
