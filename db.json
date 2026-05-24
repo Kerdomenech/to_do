@@ -1,6 +1,20 @@
 {
   "todos": [
-    { "id": "1", "title": "My first task", "completed": false },
-    { "id": "2", "title": "Learn async/await", "completed": false }
-  ]
+    {
+      "id": "1",
+      "title": "My first task",
+      "completed": false
+    },
+    {
+      "id": "2",
+      "title": "Learn async/await",
+      "completed": false
+    },
+    {
+      "title": "saludar",
+      "completed": false,
+      "id": "ysK5J2kBhWo"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
