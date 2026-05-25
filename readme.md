@@ -134,7 +134,7 @@ The application saves:
 
 ## Author
 
-Developed by Kevin Rovira
+Developed by Kerlys Bello & Joel
 
 GitHub:
 https://github.com/Kerdomenech
